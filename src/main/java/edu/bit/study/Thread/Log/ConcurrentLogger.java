@@ -26,7 +26,7 @@ public class ConcurrentLogger {
      */
     private final BlockingDeque<String> deque = new LinkedBlockingDeque<>();
     private final Lock lock = new ReentrantLock();
-    private final String logFilePath = "./logs.txt";
+    private final String logFilePath = "./src/main/java/edu/bit/study/Thread/Log/logs.txt";
     public ConcurrentLogger(){
         //启动线程去消费日志消息然后写到文件中
         Thread logWriterThread = new Thread(() ->{
